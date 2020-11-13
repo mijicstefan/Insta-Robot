@@ -1,0 +1,37 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "description": "An app for instagram API",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start":"node server.js",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild":"npm run install-client && npm run build"
+
+  },
+  "author": "Stefan Mijic",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "concurrently": "^5.3.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.0.0",
+    "express-rate-limit": "^5.1.3",
+    "helmet": "^4.2.0",
+    "hpp": "^0.2.3",
+    "instagram-private-api": "^1.43.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6",
+    "xss-clean": "^0.1.1"
+  },
+  "engines": {
+    "node": "12.13.1"
+  }
+}
